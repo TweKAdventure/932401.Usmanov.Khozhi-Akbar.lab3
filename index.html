@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Портфолио: Предприниматель и стартапер</title>
+
+    <!-- Внешний файл стилей -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Внутренние стили для ссылок в подвале -->
+    <style>
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration-thickness: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header" id="top">
+        <h1>Усманов Хожи-Акбар</h1>
+        <p class="subtitle">Начинающий предприниматель и стартапер</p>
+
+        <!-- Навигационное меню -->
+        <nav class="navigation" aria-label="Основная навигация">
+            <a href="#about" style="cursor: pointer;">Обо мне</a>
+            <a href="#skills" style="cursor: pointer;">Навыки</a>
+            <a href="#projects" style="cursor: pointer;">Мои проекты</a>
+            <a href="#startup-ideas" style="cursor: pointer;">Идеи стартапов</a>
+            <a href="#metrics" style="cursor: pointer;">Метрики</a>
+            <a href="#contact" style="cursor: pointer;">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Основная область страницы -->
+    <div class="layout">
+        <main>
+            <!-- Обо мне -->
+            <section class="section" id="about">
+                <h2>Обо мне</h2>
+
+                <p>
+                    Я начинающий предприниматель и стартапер.
+                    Интересуюсь созданием инновационных продуктов,
+                    развитием бизнеса, маркетингом и технологиями.
+                    Моя цель — создавать проекты, которые решают
+                    реальные проблемы пользователей.
+                </p>
+            </section>
+
+            <!-- Навыки -->
+            <section class="section" id="skills">
+                <h2>Навыки</h2>
+
+                <ul class="skills-list">
+                    <li>Маркетинг и анализ целевой аудитории</li>
+                    <li>Управление командой</li>
+                    <li>Финансовая грамотность</li>
+                    <li>Питчинг и презентация инвесторам</li>
+                </ul>
+            </section>
+
+            <!-- Мои проекты -->
+            <section class="section" id="projects">
+                <h2>Мои проекты</h2>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-badge">TOP</span>
+
+                        <h3>VisionQC</h3>
+
+                        <p>
+                            Стартап в области компьютерного зрения
+                            для автоматизации анализа изображений.
+                        </p>
+
+                        <a href="#contact" style="cursor: pointer;">
+                            Обсудить проект
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Финансовое образование</h3>
+
+                        <p>
+                            Образовательный сервис для изучения
+                            финансовой грамотности и предпринимательства.
+                        </p>
+
+                        <a href="#contact" style="cursor: pointer;">
+                            Обсудить проект
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Лабораторная №3: Flexbox — идеи стартапов -->
+            <section class="section" id="startup-ideas">
+                <h2>Идеи стартапов</h2>
+
+                <p>
+                    Идеи продуктов, которые помогают решать
+                    реальные проблемы пользователей.
+                </p>
+
+                <div class="ideas-grid">
+                    <article class="idea-card">
+                        <span class="idea-number">01</span>
+
+                        <h3>VisionQC</h3>
+
+                        <p>
+                            <strong>Проблема:</strong>
+                            ручная проверка изображений занимает
+                            много времени.
+                        </p>
+
+                        <p>
+                            <strong>Решение:</strong>
+                            компьютерное зрение автоматически
+                            обнаруживает дефекты.
+                        </p>
+                    </article>
+
+                    <article class="idea-card">
+                        <span class="idea-number">02</span>
+
+                        <h3>FinStart</h3>
+
+                        <p>
+                            <strong>Проблема:</strong>
+                            начинающим предпринимателям сложно
+                            планировать бюджет.
+                        </p>
+
+                        <p>
+                            <strong>Решение:</strong>
+                            сервис помогает учитывать расходы
+                            и прогнозировать прибыль.
+                        </p>
+                    </article>
+
+                    <article class="idea-card">
+                        <span class="idea-number">03</span>
+
+                        <h3>TeamFlow</h3>
+
+                        <p>
+                            <strong>Проблема:</strong>
+                            небольшие команды теряют задачи
+                            и сроки выполнения.
+                        </p>
+
+                        <p>
+                            <strong>Решение:</strong>
+                            единая платформа для задач,
+                            дедлайнов и командной работы.
+                        </p>
+                    </article>
+
+                    <article class="idea-card">
+                        <span class="idea-number">04</span>
+
+                        <h3>EcoTrack</h3>
+
+                        <p>
+                            <strong>Проблема:</strong>
+                            компаниям трудно оценивать
+                            экологичность своих процессов.
+                        </p>
+
+                        <p>
+                            <strong>Решение:</strong>
+                            сервис анализирует потребление
+                            ресурсов и предлагает улучшения.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Лабораторная №3: Grid — ключевые метрики -->
+            <section class="section" id="metrics">
+                <h2>Ключевые метрики стартапа</h2>
+
+                <p>
+                    Пример панели показателей для оценки развития
+                    продукта. Значения демонстрационные.
+                </p>
+
+                <div class="metrics-grid">
+                    <!-- MAU -->
+                    <article class="metric-card">
+                        <h3>MAU</h3>
+
+                        <p class="metric-description">
+                            Активные пользователи за месяц
+                        </p>
+
+                        <p class="metric-value">7 200</p>
+
+                        <meter
+                            min="0"
+                            max="10000"
+                            value="7200"
+                            aria-label="MAU: 7200 из целевых 10000 пользователей"
+                        >
+                            72%
+                        </meter>
+
+                        <div class="metric-chart chart-mau" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p class="metric-note">
+                            72% от цели в 10 000 пользователей
+                        </p>
+                    </article>
+
+                    <!-- LTV -->
+                    <article class="metric-card">
+                        <h3>LTV</h3>
+
+                        <p class="metric-description">
+                            Доход за всё время от одного клиента
+                        </p>
+
+                        <p class="metric-value">24 000 ₽</p>
+
+                        <meter
+                            min="0"
+                            max="30000"
+                            value="24000"
+                            aria-label="LTV: 24000 рублей из целевых 30000 рублей"
+                        >
+                            80%
+                        </meter>
+
+                        <div class="metric-chart chart-ltv" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p class="metric-note">
+                            80% от цели в 30 000 ₽
+                        </p>
+                    </article>
+
+                    <!-- CAC -->
+                    <article class="metric-card">
+                        <h3>CAC</h3>
+
+                        <p class="metric-description">
+                            Стоимость привлечения одного клиента
+                        </p>
+
+                        <p class="metric-value">3 000 ₽</p>
+
+                        <meter
+                            min="0"
+                            max="10000"
+                            value="3000"
+                            low="4000"
+                            high="7000"
+                            optimum="0"
+                            aria-label="CAC: 3000 рублей при предельном бюджете 10000 рублей"
+                        >
+                            30%
+                        </meter>
+
+                        <div class="metric-chart chart-cac" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p class="metric-note">
+                            30% от предельного бюджета 10 000 ₽;
+                            меньше — лучше
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Фотография -->
+            <figure class="avatar">
+                <img
+                    src="images/avatar.jpg"
+                    alt="Фотография Усманова Хожи-Акбара"
+                    width="250"
+                    height="250"
+                >
+
+                <figcaption>Усманов Хожи-Акбар</figcaption>
+            </figure>
+
+            <!-- Контактная форма -->
+            <section class="section contact" id="contact">
+                <h2>Связаться со мной</h2>
+
+                <form action="#" method="get">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Введите ваше имя"
+                            required
+                            style="cursor: pointer;"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Опишите ваше предложение или идею..."
+                            style="cursor: pointer;"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                        style="cursor: pointer; text-transform: uppercase;"
+                    >
+                        Отправить
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Боковая панель -->
+        <aside class="sidebar">
+            <h3>Ключевая ценность</h3>
+
+            <p>
+                Создание инновационных продуктов, решающих
+                реальные проблемы пользователей с фокусом
+                на масштабируемость и ценность.
+            </p>
+
+            <h3>Моя цель</h3>
+
+            <p>
+                Превращать идеи в полезные продукты, развивать бизнес
+                и создавать сильные команды.
+            </p>
+        </aside>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2026 Усманов Хожи-Акбар.</p>
+
+        <a href="#top" style="cursor: pointer;">
+            Вернуться наверх
+        </a>
+    </footer>
+</body>
+</html>

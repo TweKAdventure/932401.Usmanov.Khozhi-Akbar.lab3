@@ -1,0 +1,602 @@
+
+/* =========================================
+   1. CSS-ПЕРЕМЕННЫЕ
+   ========================================= */
+
+:root {
+    --primary-color: #a83e00;
+    --accent-color: #ffffff;
+    --dark-color: #572000;
+    --card-color: #ffffff;
+    --text-color: #382016;
+    --page-color: #fff5ed;
+    --shadow: 0 5px 15px rgba(55, 25, 5, 0.15);
+    --font-main: Arial, Helvetica, sans-serif;
+}
+
+/* Единый расчёт размеров элементов */
+* {
+    box-sizing: border-box;
+}
+
+/* Плавная прокрутка к разделам */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   2. ОБЩИЕ СТИЛИ
+   ========================================= */
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.header {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.subtitle {
+    margin-top: 5px;
+}
+
+/* =========================================
+   3. FLEXBOX: НАВИГАЦИОННОЕ МЕНЮ
+   ========================================= */
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 6px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navigation a:visited {
+    color: #ffffff;
+}
+
+.navigation a:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+.navigation a:active {
+    transform: scale(0.96);
+}
+
+.navigation a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   4. ОСНОВНОЙ МАКЕТ: FLEXBOX
+   ========================================= */
+
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+main {
+    flex: 2;
+    min-width: 0;
+}
+
+.section {
+    min-width: 0;
+    margin-bottom: 35px;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: var(--page-color);
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    scroll-margin-top: 20px;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: var(--dark-color);
+    position: static;
+}
+
+/* =========================================
+   5. СПИСОК НАВЫКОВ
+   ========================================= */
+
+.skills-list {
+    padding-left: 25px;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   6. СТАРЫЕ КАРТОЧКИ ПРОЕКТОВ
+   ========================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.project-card {
+    position: relative;
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #e9c3a8;
+    border-radius: 12px;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--dark-color);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(55, 25, 5, 0.25);
+}
+
+.project-card:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(55, 25, 5, 0.3);
+}
+
+.project-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.project-card a:visited {
+    color: #713000;
+}
+
+.project-card a:hover {
+    color: var(--dark-color);
+    text-decoration-thickness: 2px;
+}
+
+.project-card a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Метка TOP: абсолютное позиционирование */
+.project-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background-color: var(--dark-color);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   7. ЛР №3: FLEXBOX — ИДЕИ СТАРТАПОВ
+   ========================================= */
+
+.ideas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 18px;
+}
+
+.idea-card {
+    /* Четыре карточки в ряд на широком экране */
+    flex: 1 1 calc(25% - 14px);
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #e9c3a8;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #382016;
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.idea-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 20px rgba(55, 25, 5, 0.2);
+}
+
+.idea-card h3 {
+    margin-top: 8px;
+    color: #572000;
+}
+
+.idea-card p {
+    font-size: 0.95rem;
+}
+
+.idea-card strong {
+    color: #713000;
+}
+
+.idea-number {
+    display: inline-block;
+    color: #713000;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   8. ЛР №3: GRID — КЛЮЧЕВЫЕ МЕТРИКИ
+   ========================================= */
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #e9c3a8;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #382016;
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+}
+
+.metric-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #572000;
+    font-size: 1.4rem;
+}
+
+.metric-description {
+    min-height: 3em;
+    margin-top: 0;
+    color: #382016;
+}
+
+.metric-value {
+    margin: 12px 0;
+    color: #a83e00;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Встроенная шкала метрики */
+.metric-card meter {
+    display: block;
+    width: 100%;
+    height: 22px;
+    accent-color: #a83e00;
+}
+
+/* Графики-заглушки */
+.metric-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+    height: 75px;
+    margin-top: 18px;
+    padding: 8px;
+    border-bottom: 2px solid #a83e00;
+    border-radius: 5px 5px 0 0;
+    background-color: #fff5ed;
+}
+
+.metric-chart span {
+    flex: 1;
+    min-width: 0;
+    border-radius: 3px 3px 0 0;
+    background-color: #a83e00;
+}
+
+/* Столбцы графика MAU */
+.chart-mau span:nth-child(1) { height: 25%; }
+.chart-mau span:nth-child(2) { height: 40%; }
+.chart-mau span:nth-child(3) { height: 32%; }
+.chart-mau span:nth-child(4) { height: 55%; }
+.chart-mau span:nth-child(5) { height: 68%; }
+.chart-mau span:nth-child(6) { height: 62%; }
+.chart-mau span:nth-child(7) { height: 90%; }
+
+/* Столбцы графика LTV */
+.chart-ltv span:nth-child(1) { height: 30%; }
+.chart-ltv span:nth-child(2) { height: 38%; }
+.chart-ltv span:nth-child(3) { height: 45%; }
+.chart-ltv span:nth-child(4) { height: 43%; }
+.chart-ltv span:nth-child(5) { height: 60%; }
+.chart-ltv span:nth-child(6) { height: 75%; }
+.chart-ltv span:nth-child(7) { height: 88%; }
+
+/* Столбцы графика CAC: снижение стоимости */
+.chart-cac span:nth-child(1) { height: 90%; }
+.chart-cac span:nth-child(2) { height: 75%; }
+.chart-cac span:nth-child(3) { height: 80%; }
+.chart-cac span:nth-child(4) { height: 60%; }
+.chart-cac span:nth-child(5) { height: 48%; }
+.chart-cac span:nth-child(6) { height: 40%; }
+.chart-cac span:nth-child(7) { height: 28%; }
+
+.metric-note {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: #382016;
+}
+
+/* =========================================
+   9. ФОТОГРАФИЯ
+   ========================================= */
+
+.avatar {
+    margin: 35px 0;
+    text-align: center;
+}
+
+.avatar img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 10px;
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.avatar figcaption {
+    font-weight: bold;
+}
+
+/* =========================================
+   10. КОНТАКТНАЯ ФОРМА
+   ========================================= */
+
+.contact form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 2px solid #b9a195;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #382016;
+    font: inherit;
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: 3px solid rgba(168, 62, 0, 0.2);
+    outline-offset: 1px;
+}
+
+/* =========================================
+   11. АНИМИРОВАННАЯ КНОПКА
+   ========================================= */
+
+.submit-button {
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 7px;
+    background: linear-gradient(
+        100deg,
+        #ffffff 0%,
+        #ffd0ad 50%,
+        #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: bold;
+    transition:
+        background-position 0.35s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+.submit-button:hover {
+    background-position: 100% 0;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.3);
+}
+
+.submit-button:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+}
+
+.submit-button:active {
+    transform: scale(0.98);
+    background-position: 50% 0;
+}
+
+/* =========================================
+   12. БОКОВАЯ ПАНЕЛЬ
+   ========================================= */
+
+.sidebar {
+    flex: 1;
+    min-width: 220px;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+}
+
+.sidebar h3 {
+    color: var(--dark-color);
+}
+
+/* =========================================
+   13. ПОДВАЛ
+   ========================================= */
+
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+/* =========================================
+   14. АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ
+   Карточки идей: 2 в ряд
+   Метрики: 2 колонки
+   ========================================= */
+
+@media (max-width: 900px) {
+    .idea-card {
+        flex-basis: calc(50% - 9px);
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   15. АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ
+   Карточки идей: 1 в ряд
+   Метрики: 1 колонка
+   ========================================= */
+
+@media (max-width: 750px) {
+    body {
+        padding: 12px;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    main,
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar {
+        min-width: 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .ideas-grid {
+        flex-direction: column;
+    }
+
+    .idea-card {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .metrics-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .metric-card {
+        padding: 16px;
+    }
+
+    .metric-value {
+        font-size: 1.6rem;
+    }
+
+    .section {
+        padding: 16px;
+    }
+
+    .navigation {
+        gap: 8px;
+    }
+
+    .navigation a {
+        padding: 7px 10px;
+    }
+}
+
+/* Учитываем настройки пользователя,
+   предпочитающего уменьшенную анимацию */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
